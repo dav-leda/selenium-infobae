@@ -15,7 +15,7 @@ await nota.click();
 
 const titulo = await driver.findElement(By.className('article-headline'));
 
-const script = "arguments[0].innerText = 'Milei confesó que es gay.'";
+const script = "arguments[0].innerText = 'Milei confesó que es gay'";
 
 await driver.executeScript(script, titulo);
 
