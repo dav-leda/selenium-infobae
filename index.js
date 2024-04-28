@@ -3,6 +3,8 @@ import { Builder, Browser, By } from 'selenium-webdriver';
 
 const sleep = segs => new Promise(resolve => setTimeout(resolve, segs * 1000));
 
+await sleep(3);
+
 const driver = await new Builder().forBrowser(Browser.CHROME).build();
 
 await driver.get('https://infobae.com');
@@ -27,6 +29,6 @@ await sleep(3);
 
 await driver.actions().scroll(0, 0, 0, 0, titulo).perform();
 
-await sleep(5);
+await sleep(3);
 
 await driver.quit();
